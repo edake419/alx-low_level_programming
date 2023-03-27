@@ -6,7 +6,6 @@ int _putchar(char c);
 void swap_int(int *a, int *b);
 int isdigit(int n);
 int _strlen(char *s);
-int strlen(char *s);
 void _puts(char *str);
 void print_rev(char *s);
 void rev_string(char *s);
