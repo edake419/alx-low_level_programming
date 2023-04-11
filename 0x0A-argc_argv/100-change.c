@@ -11,7 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int coins, i, total;
-	int num[] = {25, 10, 5, 2, 1};
+	int num[5] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
 	{
@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	num = atoi(argv[1]);
+	coins = atoi(argv[1]);
 	total = 0;
 
 	if (coins < 0)
