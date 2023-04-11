@@ -2,14 +2,14 @@
 #include <stdlib.h>
 /**
  * main - print the multiplication of two arguments.
- * @argc: argument count or size of arguments.
- * @argv: argument vector
+ * @argc: size of arguments.
+ * @argv: argument array
  *
  * Return: 1 if are less of 2 arguments otherwise 0.
  */
 int main(int argc, char **argv)
 {
-	int multiplication;
+	int multiply;
 
 	if (argc < 3 || argc > 3)
 	{
@@ -18,8 +18,8 @@ int main(int argc, char **argv)
 	}
 	else
 	{
-		multiplication = atoi(*(argv + 1)) * atoi(*(argv + 2));
-		printf("%i\n", multiplication);
+		multiply = atoi(*(argv + 1)) * atoi(*(argv + 2));
+		printf("%i\n", multiply);
 	}
 	return (0);
 }
