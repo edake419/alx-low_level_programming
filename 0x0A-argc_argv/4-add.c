@@ -1,13 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
+
 /**
  * main - print the addition of two positive numbers.
+ *atoi-converts a string to an integer
  * @argc: argument count or size of arguments.
- * @argv: argument vector
+ * @argv: argument array
  *
- * Return: 1 for less of 2 arguments or nondigit numbers, 0 success
+ * Return: int digit 
  */
+
 int main(int argc, char **argv)
 {
 	int sum, i, j;
