@@ -1,7 +1,5 @@
-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#include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "main.h"
+
 
 /**
 *The _calloc function allocates memory for an array of nmemb elements of size bytes each and returns a pointer to the allocated memory.
