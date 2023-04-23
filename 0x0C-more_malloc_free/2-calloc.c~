@@ -22,10 +22,11 @@ char *_memset(char *s, char b, unsigned int n)
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	
+
+	void *a;
 	if (nmemb || size == 0){
 		return (NULL);
 	}
-	void *a;
 	a = malloc(nmemb * size);
 
 	if (a == NULL)

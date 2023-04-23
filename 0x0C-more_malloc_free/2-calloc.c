@@ -19,14 +19,14 @@ char *_memset(char *s, char b, unsigned int n)
 	return (s);
 }
 
+
+
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	
-
 	void *a;
-	if (nmemb || size == 0){
+	if (nmemb == 0 || size == 0)
 		return (NULL);
-	}
 	a = malloc(nmemb * size);
 
 	if (a == NULL)
