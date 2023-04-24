@@ -6,7 +6,7 @@
 *the predifined File macros is used
 */
 
-int main ()
+int main (void)
 {
 	printf("File :%s\n', _FILE_);
 }
