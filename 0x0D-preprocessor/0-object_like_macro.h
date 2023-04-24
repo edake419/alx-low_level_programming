@@ -1,4 +1,4 @@
-#define _object_like_macro
+#ifndef SIZE
 
 #define SIZE 1024
 
