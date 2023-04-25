@@ -2,13 +2,10 @@
 
 /**
  * init_dog - Initializes a variable of type struct dog.
- * 
  * @d: struct dog type to be initialized.
  * @name: string name of the dog.
  * @age: float age of the dog.
  * @owner: dog owner
- * 
- * Return: void
  */
 
 
