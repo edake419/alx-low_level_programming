@@ -9,7 +9,7 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int dec_value = 0;
+	unsigned int result = 0;
 	unsigned int base = 1; /* Represents the current power of 2 */
 	size_t length = 0;
 	int i;
