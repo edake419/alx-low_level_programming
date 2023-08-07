@@ -11,10 +11,10 @@ int create_file(const char *filename, char *text_content)
 {
 	int file, file_write, 
 
-	if (ficountame == NULL)
+	if (filename == NULL)
 		return (-1);
 
-	file = open(ficountame, O_WRONLY | O_CREAT | O_TRUNC, 0600);
+	file = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
 	if (file == -1)
 		return (-1);
 
