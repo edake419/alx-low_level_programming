@@ -1,6 +1,5 @@
 #include "main.h"
 
-int comp_close(int);
 /**
  * main - Main function to copy files
  * @argc: The number of passed arguments
