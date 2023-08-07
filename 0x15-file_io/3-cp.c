@@ -9,7 +9,7 @@
 int main(int argc, char *argv[])
 {
 	char buffer[1024];
-	int bytes_read = 0, _EOF = 1, fd_from = -1, fd_to = -1, error = 0;
+	int bytes_read = 0, eof, fd_from = -1, fd_to = -1, error = 0;
 
 	if (argc != 3)
 	{
@@ -32,20 +32,21 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 
-	while (_EOF)
+	while (eof > 0)
 	{
-		_EOF = read(fd_from, buffer, 1024);
-		if (_EOF == -1)
+		eof = read(fd_from, buffer, sizeof(buffer));
+		if (eof == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			close(fd_from);
 			close(fd_to);
 			exit(98);
 		}
-		else if (_EOF == 0)
+		else if (eof == 0)
 			break;
-		bytes_read += _EOF;
-		error = write(fd_to, buffer, _EOF);
+
+		bytes_read += eof;
+		error = write(fd_to, buffer, eof);
 		if (error == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
@@ -60,8 +61,10 @@ int main(int argc, char *argv[])
 		close(fd_from);
 		exit(100);
 	}
-	error = comp_close(fd_from);
+
+	error = close(fd_from);
 	if (error == -1)
 		exit(100);
+	
 	return (0);
 }
